@@ -22,7 +22,7 @@ Step 4:
 
     ./get_helm.sh
 
-Step 5:
+ Step 5:
 
 Install Prometheus
 
