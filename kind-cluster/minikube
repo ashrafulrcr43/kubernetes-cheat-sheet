@@ -6,3 +6,6 @@ minikube start --driver=docker
 sudo minikube start --driver=none
 
 
+minikube delete
+
+
