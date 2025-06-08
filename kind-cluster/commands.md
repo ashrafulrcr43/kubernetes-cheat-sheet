@@ -192,6 +192,14 @@ sum (container_memory_usage_bytes{namespace="default"}) by (pod)
 sum(rate(container_network_receive_bytes_total{namespace="default"}[5m])) by (pod)
 sum(rate(container_network_transmit_bytes_total{namespace="default"}[5m])) by (pod)
 
+## Delete ALL
+kubectl delete all --all
+
+## Delete Pod
+kubectl get pod
+kubectl delete pod pod_name
+
+
 ```
 
 
