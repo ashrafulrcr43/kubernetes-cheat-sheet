@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-class-ingress
+  namespace: ashraful
+  annotations:
+    cert-manager.io/issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - k8s-ashraful.rfft.nl
+      secretName: k8s-class-cert
+  rules:
+    - host: k8s-ashraful.rfft.nl
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: k8s-class-service
+                port:
+                  number: 8000

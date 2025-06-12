@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-class
+  namespace: ashraful
+  labels:
+    app: k8s-class
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-class
+  template:
+    metadata:
+      name: k8s-class
+      labels:
+        app: k8s-class
+    spec:
+      containers:
+        - name: k8s-class
+          image: rafaftahsin/ostad-app:v2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+      restartPolicy: Always
