@@ -140,6 +140,22 @@ spec: <br>
 
 
 
+### services yml file 
+
+apiVersion: v1 <br>
+kind: Service <br>
+metadata:<br>
+  name: {{ .Values.appName }}-service<br>
+  namespace: ashraful<br>
+spec:<br>
+  type: NodePort<br>
+  selector:<br>
+    app: {{ .Values.appName }}<br>
+  ports:<br>
+    - port: {{ .Values.servicePort }}<br>
+      targetPort: {{ .Values.containerPort }}<br>
+
+
 
 
 
