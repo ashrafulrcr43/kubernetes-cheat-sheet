@@ -113,6 +113,14 @@ repository: ashraful90/rapidcompetitions <br>
    STRIPE_PUBLIC_KEY: "pk_test_51NKOdABvOW3ENPuKaMob7GBaX0qVXyBPiguf3Upc6kM19htAoRotDtPXXBooFc5z9kP5vvB16hXv6qXAdUCqiv6b00mAnDW10c"  <br>
    STRIPE_SECRET_KEY: "sk_test_51NKOdABvOW3ENPuK5FPCZDDYCpJKj0CqLibwctOrW3n6CNaBm0xIDBMlBCBWkpR8G5BZteemwBA3QZoMJfRw3bnZ00tYZkRoB8"  <br>
 
+### namespace yml file
+apiVersion: v1 <br>
+kind: Namespace <br>
+metadata: <br>
+  name: {{.values.nameOverride}} <br>
+
+
+
 
 
 
