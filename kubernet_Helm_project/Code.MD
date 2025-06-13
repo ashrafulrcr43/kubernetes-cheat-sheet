@@ -153,9 +153,43 @@ spec:<br>
     app: {{ .Values.appName }}<br>
   ports:<br>
     - port: {{ .Values.servicePort }}<br>
-      targetPort: {{ .Values.containerPort }}<br>
+      targetPort: {{ .Values.containerPort }} <br>
 
 
+## deployment yml file 
+
+apiVersion: apps/v1  <br>
+kind: Deployment  <br>
+metadata:  <br>
+  name: {{ .Values.appName }}  <br>
+  namespace: {{ .Values.nameOverride }}  <br>
+  labels:  <br>
+    app: {{ .Values.appName }}  <br>
+spec: <br>
+  replicas: {{ .Values.replicaNumber }} <br>
+  selector: <br>
+    matchLabels: <br>
+      app: {{ .Values.appName }} <br>
+  template: <br>
+    metadata: <br>
+      labels: <br>
+        app: {{ .Values.appName }}  <br>
+    spec:  <br>
+      containers:   <br>
+        - name: {{ .Values.appName }}  <br>
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"  <br>
+          imagePullPolicy: {{ .Values.image.pullPolicy }}  <br>
+          ports:  <br>
+            - containerPort: {{ .Values.containerPort }}  <br>
+              protocol: TCP  <br>
+          env:  <br>
+            - name: SECRET_KEY  <br> 
+              value: {{ .Values.env.SECRET_KEY | quote }}  <br>
+            - name: SOCIAL_AUTH_GOOGLE_OAUTH2_KEY  <br>
+              value: {{ .Values.env.SOCIAL_AUTH_GOOGLE_OAUTH2_KEY | quote }}  <br>
+            - name: SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET  <br>
+              value: {{ .Values.env.SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET | quote }}  <br>
+      restartPolicy: Always
 
 
 
