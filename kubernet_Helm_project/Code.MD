@@ -114,10 +114,30 @@ repository: ashraful90/rapidcompetitions <br>
    STRIPE_SECRET_KEY: "sk_test_51NKOdABvOW3ENPuK5FPCZDDYCpJKj0CqLibwctOrW3n6CNaBm0xIDBMlBCBWkpR8G5BZteemwBA3QZoMJfRw3bnZ00tYZkRoB8"  <br>
 
 ### namespace yml file
+
 apiVersion: v1 <br>
 kind: Namespace <br>
 metadata: <br>
   name: {{.values.nameOverride}} <br>
+
+### ingress yml file
+
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-prod
+  namespace: {{.Values.nameOverride}}
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: rafaftahsin@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+      - http01:
+          ingress:
+            ingressClassName: nginx
+
 
 
 
