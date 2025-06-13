@@ -93,8 +93,26 @@ kubectl port-forward --address 0.0.0.0 svc/k8s-class-service 3000:8000 -n ashraf
 
 
 # Now Change Helm Variable
+##values files
+repository: ashraful90/rapidcompetitions
+  pullPolicy: IfNotPresent
+  tag: latest
 
-##
+  nameOverride: ashraful
+  fullnameOverride: ashraful
+  appName: k8s-class
+  replicaNumber: 1
+  containerPort: 8000
+  servicePort: 8000
+
+  env:
+   SECRET_KEY: "hello_world"
+   SOCIAL_AUTH_GOOGLE_OAUTH2_KEY: "776969788616-f4d7v9porfn30v1n52u2vlohi5s6kbvv.apps.googleusercontent.com"
+   SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET: "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"
+   STRIPE_PUBLIC_KEY: "pk_test_51NKOdABvOW3ENPuKaMob7GBaX0qVXyBPiguf3Upc6kM19htAoRotDtPXXBooFc5z9kP5vvB16hXv6qXAdUCqiv6b00mAnDW10c"
+   STRIPE_SECRET_KEY: "sk_test_51NKOdABvOW3ENPuK5FPCZDDYCpJKj0CqLibwctOrW3n6CNaBm0xIDBMlBCBWkpR8G5BZteemwBA3QZoMJfRw3bnZ00tYZkRoB8"
+
+
 
 
 
