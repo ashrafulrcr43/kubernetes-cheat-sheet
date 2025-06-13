@@ -156,7 +156,7 @@ spec:<br>
       targetPort: {{ .Values.containerPort }} <br>
 
 
-## deployment yml file 
+### deployment yml file 
 
 apiVersion: apps/v1  <br>
 kind: Deployment  <br>
