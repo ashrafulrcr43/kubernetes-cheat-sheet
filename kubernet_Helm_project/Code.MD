@@ -122,21 +122,21 @@ metadata: <br>
 
 ### ingress yml file
 
-apiVersion: cert-manager.io/v1
-kind: Issuer
-metadata:
-  name: letsencrypt-prod
-  namespace: {{.Values.nameOverride}}
-spec:
-  acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
-    email: rafaftahsin@gmail.com
-    privateKeySecretRef:
-      name: letsencrypt-prod
-    solvers:
-      - http01:
-          ingress:
-            ingressClassName: nginx
+apiVersion: cert-manager.io/v1 <br>
+kind: Issuer <br>
+metadata: <br> 
+  name: letsencrypt-prod <br>
+  namespace: {{.Values.nameOverride}} <br>
+spec: <br>
+  acme: <br>
+    server: https://acme-v02.api.letsencrypt.org/directory <br>
+    email: rafaftahsin@gmail.com <br>
+    privateKeySecretRef: <br>
+      name: letsencrypt-prod <br>
+    solvers: <br>
+      - http01: <br>
+          ingress: <br>
+            ingressClassName: nginx <br>
 
 
 
