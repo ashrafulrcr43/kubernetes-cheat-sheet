@@ -45,7 +45,7 @@ namespace,deployment,service,ingress,issure
 
 
 # Helm install
-helm install k8s-class .helm
+helm install k8s-class .helm <br>
 helm install k8s-class .helm -n ashraful
 
 # Delete namespace
