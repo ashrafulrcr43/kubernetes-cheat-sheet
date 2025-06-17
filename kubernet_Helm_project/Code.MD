@@ -46,11 +46,13 @@ namespace,deployment,service,ingress,issure
 
 
 # Install NGINX Ingress Controller
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo update
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx <br>
+helm repo update <br> 
 
-helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace
+helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace 
 
+#check the NGINX service type
+kubectl get svc -n ingress-nginx
 
 # Helm install
 helm install k8s-class .helm <br>
@@ -112,9 +114,6 @@ kubectl get svc -n ashraful
 
 
 # NGINX Ingress Controller Exposing Port 80/443
-kubectl get svc -n ingress-nginx
-
-#check the NGINX service type
 kubectl get svc -n ingress-nginx
 
 #if not presend 
