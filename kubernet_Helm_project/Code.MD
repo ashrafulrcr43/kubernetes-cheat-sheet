@@ -44,6 +44,10 @@ making some yml file
 namespace,deployment,service,ingress,issure
 
 
+# Helm install
+helm install k8s-class .helm <br>
+helm install k8s-class .helm -n ashraful
+
 
 # Install NGINX Ingress Controller
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx <br>
@@ -54,11 +58,11 @@ helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx
 #check the NGINX service type
 kubectl get svc -n ingress-nginx
 
-# Helm install
-helm install k8s-class .helm <br>
-helm install k8s-class .helm -n ashraful
+# Check ingress-nginx And SVC
+kubectl get pods -n ingress-nginx <Br>
+kubectl get svc -n ingress-nginx <Br>
 
-# Helm install with Namespace
+# Helm install with Namespace if problem
 helm install ostd.app .helm --create-namespace -n ashraful
 
 # Check All with namespace
