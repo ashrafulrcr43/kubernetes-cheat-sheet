@@ -17,15 +17,6 @@ helm version
 # Check All Services
 kubectl get all
 
-# create Helm directory 
- helm create .helm
-
-# on Template folder 
-delete All Template files  <br>
-open tempate delete all 
-making some yml file 
-namespace,deployment,service,ingress,issure
-
 # cert-manager Helm repo linux
 helm repo add jetstack https://charts.jetstack.io
 helm repo update
@@ -42,6 +33,16 @@ helm install cert-manager jetstack/cert-manager \
 
 # Verify it's installed
 kubectl get pods -n cert-manager
+
+# create Helm directory 
+ helm create .helm
+
+# on Template folder 
+delete All Template files  <br>
+open tempate delete all 
+making some yml file 
+namespace,deployment,service,ingress,issure
+
 
 # Helm install
 helm install k8s-class .helm
