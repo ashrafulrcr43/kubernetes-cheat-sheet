@@ -43,6 +43,8 @@ open tempate delete all
 making some yml file 
 namespace,deployment,service,ingress,issure
 
+# Create namespace
+ kubectl apply -f .helm/templates/namespace.yml 
 
 # Helm install
 helm install k8s-class .helm <br>
