@@ -12,8 +12,8 @@ helm version
 # Check All Services
 kubectl get all
 
-#create Helm directory 
-helm create .helm
+#create Helm directory <br>
+ helm create .helm
 
 on Template folder 
 making some yml file 
