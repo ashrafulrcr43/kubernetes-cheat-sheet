@@ -44,6 +44,14 @@ making some yml file
 namespace,deployment,service,ingress,issure
 
 
+
+# Install NGINX Ingress Controller
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
+
+helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace
+
+
 # Helm install
 helm install k8s-class .helm <br>
 helm install k8s-class .helm -n ashraful
