@@ -48,11 +48,22 @@ namespace,deployment,service,ingress,issure
 helm install k8s-class .helm <br>
 helm install k8s-class .helm -n ashraful
 
+# Helm install with Namespace
+helm install ostd.app .helm --create-namespace -n ashraful
+
+# Check All with namespace
+kubectl get all -n ashraful
+
+# Check issuer 
+kubectl get issuer -n ashraful
+
+# Check ingress
+ kubectl get ingress -n ashraful
+
+
 # Delete namespace
 kubectl delete namespace ashraful
 
-
-helm install ostd.app .helm --create-namespace -n ashraful
 
 # Patch the existing namespace with Helm metadata
 
