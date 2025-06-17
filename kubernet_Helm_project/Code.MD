@@ -60,6 +60,13 @@ kubectl get issuer -n ashraful
 # Check ingress
  kubectl get ingress -n ashraful
 
+# Check SVC 
+kubectl get svc -n ingress-nginx
+
+
+# Check certificate
+kubectl get certificate -n ashraful
+
 
 # Delete namespace
 kubectl delete namespace ashraful
