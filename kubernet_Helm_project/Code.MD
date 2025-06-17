@@ -12,10 +12,12 @@ helm version
 # Check All Services
 kubectl get all
 
-#create Helm directory <br>
+# create Helm directory 
  helm create .helm
 
-on Template folder 
+# on Template folder 
+delete All Template files  <br>
+open tempate delete all 
 making some yml file 
 namespace,deployment,service,ingress,issure
 
