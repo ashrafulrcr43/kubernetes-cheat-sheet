@@ -63,7 +63,7 @@ helm repo update <br>
 
 helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace 
 
-#check the NGINX service type
+# check the NGINX service type
 kubectl get svc -n ingress-nginx
 
 # Check ingress-nginx And SVC
