@@ -19,8 +19,12 @@ on Template folder
 making some yml file 
 namespace,deployment,service,ingress,issure
 
-# cert-manager Helm repo
+# cert-manager Helm repo linux
 helm repo add jetstack https://charts.jetstack.io
+helm repo update
+
+# cert-manager Helm repo windows
+helm repo add jetstack https://charts.jetstack.io <br>
 helm repo update
 
 # Install cert-manager with CRDs
