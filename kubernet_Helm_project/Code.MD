@@ -48,6 +48,9 @@ namespace,deployment,service,ingress,issure
 helm install k8s-class .helm <br>
 helm install k8s-class .helm -n ashraful
 
+# Upgrade the existing release
+helm upgrade k8s-class .helm/ -n ashraful
+
 
 # Install NGINX Ingress Controller
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx <br>
@@ -99,9 +102,6 @@ helm install k8s-class .helm -n ashraful
 # Problem face
 helm install k8s-class .heml/ -n ashraful
 
-
-# Upgrade the existing release
-helm upgrade k8s-class .heml/ -n ashraful
 
 # Check if the NGINX Ingress
 kubectl get pods -n ingress-nginx
