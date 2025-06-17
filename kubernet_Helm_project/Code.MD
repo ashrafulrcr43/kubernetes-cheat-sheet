@@ -51,6 +51,9 @@ helm install k8s-class .helm -n ashraful
 # Upgrade the existing release
 helm upgrade k8s-class .helm/ -n ashraful
 
+# helm uninstall
+helm uninstall k8s-class -n ashraful
+
 
 # Install NGINX Ingress Controller
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx <br>
