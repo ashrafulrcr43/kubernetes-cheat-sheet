@@ -97,6 +97,9 @@ kubectl get certificate -n ashraful
 # Delete namespace
 kubectl delete namespace ashraful
 
+# Check Browser in using localhost
+ kubectl port-forward svc/k8s-class-service 8080:8000 -n ashraful <br>
+http://localhost:8080/
 
 # Patch the existing namespace with Helm metadata
 
