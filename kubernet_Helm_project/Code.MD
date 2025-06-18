@@ -141,8 +141,8 @@ helm install ingress-nginx ingress-nginx/ingress-nginx \
   --set controller.service.nodePorts.https=30443
 
 
-### port-forward command:
-kubectl port-forward --address 0.0.0.0 svc/k8s-class-service 3000:8000 -n ashraful
+# port-forward command:
+kubectl port-forward --address 0.0.0.0 svc/k8s-class-service 8000:8000 -n ashraful
 
 
 # Now Change Helm Variable
