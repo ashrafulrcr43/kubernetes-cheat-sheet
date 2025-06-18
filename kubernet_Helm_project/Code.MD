@@ -31,6 +31,10 @@ helm install cert-manager jetstack/cert-manager \
   --create-namespace \
   --set installCRDs=true
 
+# Helam create-namespace
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --set installCRDs=true
+
+
 # Verify it's installed
 kubectl get pods -n cert-manager
 
