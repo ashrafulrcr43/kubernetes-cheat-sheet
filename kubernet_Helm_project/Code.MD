@@ -18,7 +18,7 @@ helm version
 kubectl get all
 
 # cert-manager Helm repo linux
-helm repo add jetstack https://charts.jetstack.io
+helm repo add jetstack https://charts.jetstack.io <br>
 helm repo update
 
 # cert-manager Helm repo windows
