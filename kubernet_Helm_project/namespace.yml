@@ -2,3 +2,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: ashraful
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: k8s-class
+    meta.helm.sh/release-namespace: ashraful
