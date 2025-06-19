@@ -7,7 +7,8 @@ $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scr
 $ chmod 700 get_helm.sh <br>
 $ ./get_helm.sh
 
-# install Helm Windows 
+# install Helm Windows
+winget install Helm.Helm <br>
 choco install kubernetes-helm
 
 
