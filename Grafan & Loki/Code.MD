@@ -39,6 +39,21 @@ helm install loki-stack grafana/loki-stack \
 ## Check pods
 kubectl get pods -n monitoring
 
+## Access Grafana Check fast
+ kubectl get svc -n monitoring
+
+##Expose Grafana Port forward Grafana
+kubectl port-forward svc/loki-stack-grafana 3000:80 -n monitoring
+
+## user and pass word
+user : admin <br>
+
+password:
+kubectl get secret --namespace monitoring loki-stack-grafana -o jsonpath="{.data.admin-password}" | base64 --decode
+
+
+
+
 
 
 
