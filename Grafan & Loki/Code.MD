@@ -18,6 +18,30 @@ http://localhost:8000/
 # 2. Install Grafan & Loki
 Grafan = Dashboard <br>
 Loki = Log File
+## create namespace monitoring
+kubectl create namespace monitoring
+## Add Loki Helm repo
+helm repo add grafana https://grafana.github.io/helm-charts <br>
+helm repo update
+
+## Install Loki Stack (Grafana + Loki + Promtail)
+helm install loki-stack grafana/loki-stack \ 
+  --namespace monitoring \
+  --set grafana.enabled=true \
+  --set promtail.enabled=true \
+  --set loki.enabled=true
+
+### This will install:
+•	Loki <br>
+•	Promtail (agent on each node to collect logs) <br>
+•	Grafana (web UI) <br>
+
+## Check pods
+kubectl get pods -n monitoring
+
+
+
+
 
 
 
