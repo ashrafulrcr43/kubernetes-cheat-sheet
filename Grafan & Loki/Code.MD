@@ -58,6 +58,15 @@ kubectl get secret --namespace monitoring loki-stack-grafana -o jsonpath="{.data
 3.	URL: http://loki-stack:3100
 4.	Click Save & Test
 
+## Show Data Sources
+1. Default loki 
+2. Filter 
+===========
+1. namespace 
+2. label 
+3. Run query
+
+
 
 
 
