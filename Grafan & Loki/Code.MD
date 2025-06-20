@@ -15,7 +15,7 @@ kubectl get pods -n app
 kubectl port-forward svc/backend-service -n app 8000:8000
 ## Check browser 
 http://localhost:8000/
-# Install Grafan & Loki
+# 2. Install Grafan & Loki
 Grafan = Dashboard <br>
 Loki = Log File
 
