@@ -52,6 +52,13 @@ password:
 kubectl get secret --namespace monitoring loki-stack-grafana -o jsonpath="{.data.admin-password}" | base64 --decode
 
 
+## Configure Data Source in Grafana
+1.	Go to Grafana → Settings (Gear icon) → Data Sources → Add data source
+2.	Select Loki
+3.	URL: http://loki-stack:3100
+4.	Click Save & Test
+
+
 
 
 
