@@ -10,6 +10,10 @@ kubectl apply -f service.yml <br>
 kubectl get svc -n app     
 # Check pods
 kubectl get pods -n app
+# Run project 
+kubectl port-forward svc/backend-service -n app 8000:8000
+# Check browser 
+http://localhost:8000/
 
 
 
