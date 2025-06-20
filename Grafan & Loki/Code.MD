@@ -66,6 +66,12 @@ kubectl get secret --namespace monitoring loki-stack-grafana -o jsonpath="{.data
 2. label 
 3. Run query
 
+# Dashoard Design Import
+https://grafana.com/grafana/dashboards/
+1. Select one 
+2. Right Side Copy Dashboard ID 
+3. Go my Grafana => dashboard => new => past id => loki => import
+
 
 
 
