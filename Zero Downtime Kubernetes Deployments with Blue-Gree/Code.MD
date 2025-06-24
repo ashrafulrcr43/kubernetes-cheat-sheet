@@ -53,6 +53,9 @@ minikube service myapp-service
 # Update service selector
 kubectl patch service myapp-service -p '{"spec": {"selector": {"app": "myapp", "version": "green"}}}'
 
+# Roll Back 
+kubectl patch service ostad-app-service -p '{"spec": {"selector": {"app": "ostad-app", "version": "blue"}}}'
+
 # Trabuleshot verify Endpoint
 kubectl get endpoints ostad-app-service
 1. if end point ip not found 
