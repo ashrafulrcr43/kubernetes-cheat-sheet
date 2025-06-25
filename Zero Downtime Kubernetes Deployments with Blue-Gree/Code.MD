@@ -51,7 +51,7 @@ minikube service myapp-service
 
 # Blue থেকে Green-এ সুইচ করুন
 # Update service selector
-kubectl patch service myapp-service -p '{"spec": {"selector": {"app": "myapp", "version": "green"}}}'
+kubectl patch service ostad-app-service-p '{"spec": {"selector": {"app": "ostad-app", "version": "green"}}}'
 
 # Roll Back 
 kubectl patch service ostad-app-service -p '{"spec": {"selector": {"app": "ostad-app", "version": "blue"}}}'
