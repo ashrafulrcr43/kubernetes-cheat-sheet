@@ -67,7 +67,7 @@ selector:
 kubectl edit svc ostad-app-service
 1. selector:
     app: ostad-app
-# check nodes wide
+# check nodes wide minikube is ready or not
  kubectl get nodes -o wide
 ## Finally check 
 kubectl get endpoints ostad-app-service
