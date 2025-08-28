@@ -4,4 +4,4 @@ Check kind-cluser folder
 kubectl get ns
 # Create new ns 
 kubectl crate ns ashraful
-# making cluser 
+# making cluster 
