@@ -41,4 +41,41 @@ kubectl get pod -n ashraful
 1. kubectl config set-context --current --namespace=ashraful
 2. kubectl port-forward pod/nginx-pod 8080:80
 3. http://localhost:8080
+# Create deploymrnt.yml file 
+<pre>
+  apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+  
+</pre>
+# apply deployment file 
+kubectl apply -f deployment.yml n ashraful
+# check deployment and replica
+1. kubectl get deployment -n ashraful
+2. kubectl get pods
+3. kubectl get pod -n ashraful
+# de;ete deployment 
+kubectl delete deployment <deployment-name>
+
+
+
    
