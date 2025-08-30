@@ -1,4 +1,7 @@
-# fast Install docker,kubectl, minikube/kind  
+# fast Install docker,kubectl, minikube/kind I test Windows 
+1. open WSL
+2. OPen Docker
+3. install minikube
 Check kind-cluser folder 
 # Check kubernets ns 
 kubectl get ns
@@ -34,3 +37,8 @@ kubectl get pod -n ashraful
   kubectl delete pod pod-name
   kubectl delete pod --all
 </pre>
+# Check Localhost on browser 
+1. kubectl config set-context --current --namespace=ashraful
+2. kubectl port-forward pod/nginx-pod 8080:80
+3. http://localhost:8080
+   
