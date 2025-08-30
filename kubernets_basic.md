@@ -23,3 +23,11 @@ spec:
         - containerPort: 80
 
 </pre>
+
+# Apply pods name space 
+kubectl apply -f create_pod.yml -n ashraful
+# Delete pods 
+<pre>
+  kubectl delete pod pod-name
+  kubectl delete pod --all
+</pre>
