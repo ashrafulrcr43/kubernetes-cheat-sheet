@@ -69,10 +69,13 @@ spec:
 </pre>
 # apply deployment file 
 kubectl apply -f deployment.yml n ashraful
-# check deployment and replica
+# check deployment 
 1. kubectl get deployment -n ashraful
 2. kubectl get pods
 3. kubectl get pod -n ashraful
+
+# check replicaset 
+kubectl get rs -n ashraful
 # delete deployment 
 kubectl delete deployment <deployment-name>
 
