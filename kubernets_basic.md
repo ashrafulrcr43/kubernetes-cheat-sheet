@@ -129,7 +129,7 @@ spec:
     app: nginx
   ports:
     - protocol: TCP
-      port: 80
+      port: 8080
       targetPort: 80
 </pre>
 ## Apply Services 
