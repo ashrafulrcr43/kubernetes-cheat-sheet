@@ -93,28 +93,28 @@ kubectl delete deployment <deployment-name>
 
 # making service for external world serve 
 ## Kubernetes Service Types 
-1. ClusterIP (default)
+## 1. ClusterIP (default)
 =============================
 #### Use case: Internal communication inside the cluster.
 ####  Behavior: Exposes the Service on a cluster-internal IP.
 ####  Accessible: Only from inside the cluster.
-2. NodePort
+## 2. NodePort
  =======================
-### Use case: Simple external access (testing, dev).
-### Behavior: Exposes the Service on a static port (the NodePort) on each cluster node’s IP.
-## Accessible: From outside the cluster via http://<node-ip>:<node-port>.
+#### Use case: Simple external access (testing, dev).
+####  Behavior: Exposes the Service on a static port (the NodePort) on each cluster node’s IP.
+####  Accessible: From outside the cluster via http://<node-ip>:<node-port>.
 
-3. LoadBalancer
+## 3. LoadBalancer
    ==================================
-### Use case: Production-grade external access (cloud environments).
-### Behavior: Provisions an external load balancer from your cloud provider (AWS ELB, GCP LB, Azure LB, etc.).
-### Accessible: From outside the cluster via the cloud LB’s external IP/DNS.
+####  Use case: Production-grade external access (cloud environments).
+####  Behavior: Provisions an external load balancer from your cloud provider (AWS ELB, GCP LB, Azure LB, etc.).
+####  Accessible: From outside the cluster via the cloud LB’s external IP/DNS.
 
-4. ExternalName
+## 4. ExternalName
 ========================================
-### Use case: Map a Kubernetes Service name to an external DNS name.
-### Behavior: Returns a CNAME record to the client, effectively redirecting traffic to an external service.
-### Accessible: Internal cluster name → external DNS name.
+####  Use case: Map a Kubernetes Service name to an external DNS name.
+####  Behavior: Returns a CNAME record to the client, effectively redirecting traffic to an external service.
+####  Accessible: Internal cluster name → external DNS name.
 service.yml 
 <pre>
   apiVersion: v1
