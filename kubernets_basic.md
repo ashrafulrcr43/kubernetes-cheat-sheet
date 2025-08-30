@@ -24,8 +24,11 @@ spec:
 
 </pre>
 
-# Apply pods name space 
+# Apply pods namespace 
 kubectl apply -f create_pod.yml -n ashraful
+
+# Check pod with namespace 
+kubectl get pod -n ashraful
 # Delete pods 
 <pre>
   kubectl delete pod pod-name
