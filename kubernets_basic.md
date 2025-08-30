@@ -95,9 +95,9 @@ kubectl delete deployment <deployment-name>
 ## Kubernetes Service Types 
 1. ClusterIP (default)
 =============================
-### Use case: Internal communication inside the cluster.
-### Behavior: Exposes the Service on a cluster-internal IP.
-### Accessible: Only from inside the cluster.
+#### Use case: Internal communication inside the cluster.
+####  Behavior: Exposes the Service on a cluster-internal IP.
+####  Accessible: Only from inside the cluster.
 2. NodePort
  =======================
 ### Use case: Simple external access (testing, dev).
