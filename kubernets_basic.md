@@ -41,7 +41,7 @@ kubectl get pod -n ashraful
 1. kubectl config set-context --current --namespace=ashraful
 2. kubectl port-forward pod/nginx-pod 8080:80
 3. http://localhost:8080
-# Create deploymrnt.yml file 
+# Create deployment.yml file 
 <pre>
   apiVersion: apps/v1
 kind: Deployment
