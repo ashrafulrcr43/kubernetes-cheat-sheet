@@ -117,8 +117,27 @@ kubectl delete deployment <deployment-name>
 ### Accessible: Internal cluster name → external DNS name.
 service.yml 
 <pre>
-  
+  apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  labels:
+    app: nginx
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
 </pre>
+## Apply Services 
+kubectl apply -f service.yml -n ashraful
+## Check service
+kubectl get svc -n ashraful
+## Delete Service
+kubectl delete svc nginx-service -n ashraful
 
 
 
