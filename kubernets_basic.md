@@ -76,6 +76,9 @@ kubectl apply -f deployment.yml n ashraful
 
 # check replicaset 
 kubectl get rs -n ashraful
+
+# check browser -port-forward 
+kubectl port-forward -n ashraful deployment/nginx-deployment 8080:80
 # delete deployment 
 kubectl delete deployment <deployment-name>
 
