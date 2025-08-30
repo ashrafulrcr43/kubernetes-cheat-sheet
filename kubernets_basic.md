@@ -73,8 +73,9 @@ kubectl apply -f deployment.yml n ashraful
 1. kubectl get deployment -n ashraful
 2. kubectl get pods
 3. kubectl get pod -n ashraful
-# de;ete deployment 
+# delete deployment 
 kubectl delete deployment <deployment-name>
+
 
 
 
