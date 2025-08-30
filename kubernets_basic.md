@@ -136,6 +136,10 @@ spec:
 kubectl apply -f service.yml -n ashraful
 ## Check service
 kubectl get svc -n ashraful
+
+## For test browser 
+minikube service nginx-service -n ashraful --url
+
 ## Delete Service
 kubectl delete svc nginx-service -n ashraful
 
